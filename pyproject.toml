@@ -5,9 +5,17 @@ version = "0.1.0"
 description = "Платформа мотиторинга ЧС"
 requires-python = ">=3.12"
 
+
 dependencies = [
-    "pydantic-settings >= 2.4", # конфиг из .env
-    "structlog >= 24.4",  # логирование 
+    "pydantic-settings>=2.4",
+    "structlog>=24.4",
+    "sqlalchemy[asyncio]>=2.0", #ORM + async-движок
+    "psycopg[binary]>=3.2",     #Драйвер для запросов
+    "alembic>=1.13", #миграции
+    "telethon>=1.36",
+    "redis>=5.0",
+    "feedparser>=6.0",
+    "httpx>=0.27", #асинхронный Http-клиент
 ]
 
 [dependency-groups]
