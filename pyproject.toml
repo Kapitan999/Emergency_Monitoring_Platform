@@ -1,0 +1,21 @@
+[project]
+
+name = "emergency-monitoring-platform"
+version = "0.1.0"
+description = "Платформа мотиторинга ЧС"
+requires-python = ">=3.12"
+
+dependencies = [
+    "pydantic-settings >= 2.4", # конфиг из .env
+    "structlog >= 24.4",  # логирование 
+]
+
+[dependency-groups]
+
+dev = [
+    "pytest >= 8.0",
+    "ruff >= 0.6"
+]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
